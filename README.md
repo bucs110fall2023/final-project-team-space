@@ -21,11 +21,11 @@ For our final project, we want to create a two player game where two spaceships,
 
 ### Initial Design
 
-![initial gui](assets/gui.jpg.fig)
+![initial gui](assets/gui.jpeg)
 
 ### Final Design
 
-![final gui](assets/finalgui.jpg.fig)
+![final gui](assets/finalgui.jpeg)
 
 ## Program Design
 
