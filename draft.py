@@ -16,6 +16,24 @@ class Spaceship(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.center = [pos_x, pos_y]
 
+    def create_loading_image(self):
+        loading_img = pygame.transform.rotozoom(self.image, 90, 2)
+        return loading_img
+
+    
+    def render_start_menu_text(self, win):
+        # Create font objects
+        title_font = pygame.font.Font('font/Pixeltype.ttf', 36)
+        instruction_font = pygame.font.Font("font/Pixeltype.ttf", 36)
+
+        # Text surfaces
+        title_text = title_font.render("SPACE SHOOTER", True, (255, 255, 255))
+        instruction_text = instruction_font.render("PRESS SPACEBAR TO START", True, (255, 255, 255))
+
+        # Blit the text surfaces onto the screen
+        win.blit(title_text, (350, 100))
+        win.blit(instruction_text, (300, 400))
+
 class RedSpaceship(Spaceship):
     def __init__(self, pos_x, pos_y):
         super().__init__("assets/spaceship_red.png", 50, 50, pos_x, pos_y)
@@ -54,7 +72,7 @@ def main():
 
     width, height = 900, 500
     win = pygame.display.set_mode((width, height))
-    pygame.display.set_caption("Space Game")
+    pygame.display.set_caption("Space Shooter")
 
     # Load your background image
     background_img = pygame.image.load("assets/back.png")
@@ -73,6 +91,10 @@ def main():
 
     # Game state variable
     game_running = False
+
+    # Load scaled and rotated spaceship images for the loading screen
+    red_spaceship_loading = red_spaceship.create_loading_image()
+    yellow_spaceship_loading = yellow_spaceship.create_loading_image()
 
     run = True
     while run:
@@ -112,8 +134,15 @@ def main():
             spaceship_group.draw(win)
 
         else:
-            # If the game is not running, fill the screen with blue
-            win.fill((0, 0, 255))
+            # Game loading menu, must click SPACE to continue
+            win.fill((94, 129, 162))
+            # Call the render_start_menu_text method for both spaceships
+            red_spaceship.render_start_menu_text(win)
+            yellow_spaceship.render_start_menu_text(win)
+            # Blit the scaled and rotated spaceship images on the loading screen
+            win.blit(red_spaceship_loading, (250, 250))
+            win.blit(yellow_spaceship_loading, (550, 175))
+
 
         # Update the display
         pygame.display.update()
