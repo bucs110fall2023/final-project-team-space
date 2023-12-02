@@ -27,8 +27,8 @@ class Spaceship(pygame.sprite.Sprite):
         instruction_font = pygame.font.Font("font/Pixeltype.ttf", 36)
 
         # Text surfaces
-        title_text = title_font.render("SPACE SHOOTER", True, (255, 255, 255))
-        instruction_text = instruction_font.render("PRESS SPACEBAR TO START", True, (255, 255, 255))
+        title_text = title_font.render("SPACE SHOOTER", False, (255, 255, 255))
+        instruction_text = instruction_font.render("PRESS SPACEBAR TO START", False, (255, 255, 255))
 
         # Blit the text surfaces onto the screen
         win.blit(title_text, (350, 100))
