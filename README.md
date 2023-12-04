@@ -39,11 +39,24 @@ For our final project, we want to create a two player game where two spaceships,
 
 ### Classes
 
-- << You should have a list of each of your classes with a description >>
+- Spaceship
+Description: Creates the sprite object for the creation of the two playable spaceships and sets the text for the start screen
+
+- RedSpaceship
+Description: Loads in the image for the red spaceship and handles its movement
+
+-YelowSpaceship
+Description: Loads in the image for the yellow spaceship and handles its movement
+
+-Projectiles:
+Description: Creates the projectile object needed for each spaceship to us
+
+-Health:
+Description: Creates the health values of each spaceship
 
 ## ATP
 
-Program: "Spaceship Duel"
+Program: "Space Shooter"
 
 Test Case 1: Player One Movement
 Test Description: Check that Player One's spaceship moves up, down, left, and right.
