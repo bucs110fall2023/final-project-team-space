@@ -25,7 +25,7 @@ For our final project, we want to create a two player game where two spaceships,
 
 ### Final Design
 
-![final gui](assets/final_GUI.jpg)
+![final gui](assets/final_GUI.png)
 
 ## Program Design
 
