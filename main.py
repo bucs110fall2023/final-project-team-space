@@ -1,20 +1,13 @@
 import pygame
-from src.controller import GameController
-from src.model import GameModel
-from src.view import GameView
+#import your controller
 
 def main():
     pygame.init()
+    #Create an instance on your controller object
+    #Call your mainloop
+    
+    ###### NOTHING ELSE SHOULD GO IN main(), JUST THE ABOVE 3 LINES OF CODE ######
 
-    # Create instances of your model and view
-    model = GameModel()
-    view = GameView()
-
-    # Create an instance of your controller
-    controller = GameController(model, view)
-
-    # Call the main loop of your controller
-    controller.main_loop()
-
+# https://codefather.tech/blog/if-name-main-python/
 if __name__ == '__main__':
     main()
