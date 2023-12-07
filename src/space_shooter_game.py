@@ -112,8 +112,8 @@ class SpaceShooterGame:
                 health_font = pygame.font.Font("font/Pixeltype.ttf", 36)
                 red_health_text = health_font.render(f"Red Health: {self.red_health}", True, (255, 0, 0))
                 yellow_health_text = health_font.render(f"Yellow Health: {self.yellow_health}", True, (255, 255, 0))
-                self.win.blit(red_health_text, (10, 10))
-                self.win.blit(yellow_health_text, (self.width - yellow_health_text.get_width() - 10, 10))
+                self.win.blit(red_health_text, (120, 10))
+                self.win.blit(yellow_health_text, (self.width - yellow_health_text.get_width() - 120, 10))
 
                 if self.yellow_health <= 0 or self.red_health <= 0:
                     winner_text = "RED WINS!" if self.yellow_health <= 0 else "YELLOW WINS!"
