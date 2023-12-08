@@ -13,7 +13,7 @@
 
 ## Project Description
 
-For our final project, we want to create a two-player game where two spaceships, facing each other horizontally, will fight by firing laser bolts under one side has hit the other a certain number of times.
+For our final project, we want to create a two-player game where two spaceships, facing each other horizontally, will fight by firing laser bolts under one side has hit the other a certain number of times. Class-main is draft 1 and main is draft 2.
 
 ***    
 
