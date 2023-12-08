@@ -13,7 +13,8 @@
 
 ## Project Description
 
-For our final project, we want to create a two-player game where two spaceships, facing each other horizontally, will fight by firing laser bolts under one side has hit the other a certain number of times. Class-main is draft 1 and main is draft 2.
+For our final project, we want to create a two-player game where two spaceships, facing each other horizontally, will fight by firing laser bolts under one side has hit the other a certain number of times. Class-main is draft 1 and main is draft 2. To run program git clone and cd into final-project-team-space directory and run main.py script
+
 
 ***    
 
@@ -34,7 +35,7 @@ For our final project, we want to create a two-player game where two spaceships,
 ### Features
 
 1. Two player controls
-2. Vertical movement from both spaceships
+2. Vertical and Horizontal movement from both spaceships
 3. Creation of moving projectiles
 4. Moving background
 5. Score tracker
