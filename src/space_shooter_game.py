@@ -6,7 +6,45 @@ from src.spaceship import Spaceship
 
 
 class SpaceShooterGame:
+    """
+    A class representing a space shooter game using Pygame.
+
+    Attributes:
+        clock (pygame.time.Clock): The clock to control the frame rate.
+        red_health (int): The health of the red spaceship.
+        yellow_health (int): The health of the yellow spaceship.
+        game_manager (GameManager): An instance of the GameManager class.
+        width (int): The width of the game window.
+        height (int): The height of the game window.
+        win (pygame.Surface): The game window surface.
+        background_img (pygame.Surface): The background image of the game.
+        red_spaceship (RedSpaceship): An instance of the RedSpaceship class.
+        yellow_spaceship (YellowSpaceship): An instance of the YellowSpaceship class.
+        spaceship_group (pygame.sprite.Group): A sprite group containing the spaceships.
+        bg_x1 (int): The x-coordinate of the first background image.
+        bg_x2 (int): The x-coordinate of the second background image.
+        game_running (bool): A flag indicating whether the game is currently running.
+        red_spaceship_loading (pygame.Surface): The loading image for the red spaceship.
+        yellow_spaceship_loading (pygame.Surface): The loading image for the yellow spaceship.
+        hit_sound (pygame.mixer.Sound): The sound played on a hit event.
+        shoot_sound (pygame.mixer.Sound): The sound played on a shoot event.
+
+    Methods:
+        handle_events(self):
+            Handles Pygame events such as quit, keydown, and custom events.
+
+        reset_game(self):
+            Resets the game state to its initial conditions.
+
+        main_loop(self):
+            The main loop of the game handling events, updating game state, and rendering.
+
+    """
+    
     def __init__(self):
+        """
+        Initializes a SpaceShooterGame object.
+        """
         pygame.init()
         pygame.mixer.init()
         self.clock = pygame.time.Clock()
@@ -37,6 +75,9 @@ class SpaceShooterGame:
         self.shoot_sound = pygame.mixer.Sound("assets/Gun+Silencer.mp3")
 
     def handle_events(self):
+        """
+        Handles Pygame events such as quit, keydown, and custom events.
+        """
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -72,6 +113,9 @@ class SpaceShooterGame:
 
 
     def reset_game(self):
+        """
+        Resets the game state to its initial conditions.
+        """
         self.red_health = 12
         self.yellow_health = 12
         self.red_spaceship.rect.topleft = (100, 250)
@@ -83,6 +127,9 @@ class SpaceShooterGame:
    
    
     def main_loop(self):
+        """
+        The main loop of the game handling events, updating game state, and rendering.
+        """
         while True:
             self.handle_events()
 

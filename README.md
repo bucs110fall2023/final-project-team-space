@@ -41,15 +41,15 @@ For our final project, we want to create a two-player game where two spaceships,
 
 ### Classes
 
--Spaceship Description: Creates the sprite object for the creation of the two playable spaceships and sets the text for the start screen
+Spaceship: The Spaceship class represents a generic spaceship in a Pygame-based game. It handles the initialization of the spaceship, creates loading images, and renders start menu text.
 
--RedSpaceship Description: Loads in the image for the red spaceship and handles its movement
+YellowSpaceship: YellowSpaceship is a subclass of Spaceship, representing a yellow spaceship in the game. It inherits spaceship attributes and movement methods, specific to yellow spaceship controls.
 
--YelowSpaceship Description: Loads in the image for the yellow spaceship and handles its movement
+RedSpaceship: RedSpaceship, another subclass of Spaceship, represents a red spaceship in the game. Similar to YellowSpaceship, it inherits generic spaceship functionalities and has its own movement controls.
 
--Projectiles: Description: Creates the projectile object needed for each spaceship to us
+GameManager: The GameManager class is responsible for managing game elements such as bullets, their movement, and collision detection. It also handles the drawing of the game window.
 
--Health: Description: Creates the health values of each spaceship
+SpaceShooterGame: SpaceShooterGame is the main class representing the entire space shooter game. It initializes the game window, spaceships, manages game state, and contains the main loop for handling events, updating the game, and rendering the screen.
 
 ## ATP
 Program: "Space Shooter"
